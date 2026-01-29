@@ -1,6 +1,12 @@
 ???? SHOW ?? Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
-????? LOG  ?? 2026-01-28 23:58:15 | PjIExoBotDAO.DataHelperSQLiteDAO | path to 'src/PjStorage/PjDataBase/PjDataBaseEXO.sqlite': 'D:\workspace\Clases de la U\PjEXOTROOPER\src\PjStorage' does not exist
+????? LOG  ?? 2026-01-29 00:21:59 | PjIExoBotDAO.DataHelperSQLiteDAO | path to '...\PjStorage\PjDataBase\PjDataBaseEXO.sqlite': 'D:\workspace\Clases de la U\PjEXOTROOPER\...\PjStorage' does not exist
 ???? SHOW ?? Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
-????? LOG  ?? 2026-01-28 23:58:39 | PjIExoBotDAO.DataHelperSQLiteDAO | path to 'src/PjStorage/PjDataBase/PjDataBaseEXO.sqlite': 'D:\workspace\Clases de la U\PjEXOTROOPER\src\PjStorage' does not exist
+????? LOG  ?? 2026-01-29 00:22:36 | PjIExoBotDAO.DataHelperSQLiteDAO | path to '..\PjStorage\PjDataBase\PjDataBaseEXO.sqlite': 'D:\workspace\Clases de la U\PjEXOTROOPER\..\PjStorage' does not exist
 ???? SHOW ?? Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
-????? LOG  ?? 2026-01-29 00:01:54 | PjIExoBotDAO.DataHelperSQLiteDAO | path to 'src/PjStorage/PjDataBase/PjDataBaseEXO.sqlite': 'D:\workspace\Clases de la U\PjEXOTROOPER\src\PjStorage' does not exist
+????? LOG  ?? 2026-01-29 00:23:13 | PjIExoBotDAO.DataHelperSQLiteDAO | path to '..\PjStorage\PjDataBase\PjDataBaseEXO.sqlite': 'D:\workspace\Clases de la U\PjEXOTROOPER\..\PjStorage' does not exist
+???? SHOW ?? Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
+????? LOG  ?? 2026-01-29 00:34:14 | PjIExoBotDAO.DataHelperSQLiteDAO | path to 'jStorage\PjDataBase\PjDataBaseEXO.sqlite': 'D:\workspace\Clases de la U\PjEXOTROOPER\jStorage' does not exist
+???? SHOW ?? Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
+????? LOG  ?? 2026-01-29 00:36:53 | PjIExoBotDAO.DataHelperSQLiteDAO | path to 'jStorage\PjDataBase\PjDataBaseEXO.sqlite': 'D:\workspace\Clases de la U\PjEXOTROOPER\jStorage' does not exist
+???? SHOW ?? Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
+????? LOG  ?? 2026-01-29 00:38:07 | PjIExoBotDAO.DataHelperSQLiteDAO | path to 'jStorage\PjDataBase\PjDataBaseEXO.sqlite': 'D:\workspace\Clases de la U\PjEXOTROOPER\jStorage' does not exist
