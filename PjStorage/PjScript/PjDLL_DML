@@ -1,0 +1,92 @@
+-- database: ..\PjDataBase\PjDataBaseEXO.sqlite
+/*AUTOR : Justin Pincay*/
+DROP TABLE IF EXISTS PjIExoBot;
+
+DROP TABLE IF EXISTS PjTipoExoBot;
+
+DROP TABLE IF EXISTS PjArma;
+
+DROP TABLE IF EXISTS PjIdTipoArma;
+
+DROP TABLE IF EXISTS PjMunicion;
+
+DROP TABLE IF EXISTS PjTipoMunicion;
+
+CREATE TABLE
+    PjTipoMunicion (
+        PjIdTipoMunicion INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        PjNombre VARCHAR(10) NOT NULL,
+        Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
+        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaModifica DATETIME
+    );
+
+CREATE TABLE
+    PjMunicion (
+        PjIdMunicion INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        PjIdTipoMunicion INTEGER NOT NULL REFERENCES PjTipoMunicion (PjIdTipoMunicion),
+        PjNombre VARCHAR(10) NOT NULL,
+        Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
+        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaModifica DATETIME
+    );
+
+CREATE TABLE
+    PjTipoArma (
+        PjIdTipoArma INTEGER PRIMARY KEY AUTOINCREMENT,
+        PjNombre TEXT NOT NULL UNIQUE,
+        Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
+        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaModifica DATETIME
+    );
+
+CREATE TABLE
+    PjArma (
+        PjIdArma INTEGER PRIMARY KEY AUTOINCREMENT,
+        PjIdTipoArma INTEGER NOT NULL REFERENCES PjTipoArma (PjIdTipoArma),
+        PjNombre TEXT NOT NULL,
+        Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
+        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaModifica DATETIME
+    );
+
+CREATE TABLE
+    PjTipoExoBot (
+        PjIdTipoExoBot INTEGER PRIMARY KEY AUTOINCREMENT,
+        PjNombre VARCHAR(50) NOT NULL,
+        Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
+        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaModifica DATETIME
+    );
+
+CREATE TABLE
+    PjIExoBot (
+        PjIdIExoBot INTEGER PRIMARY KEY AUTOINCREMENT,
+        PjIdTipoExoBot INTEGER NOT NULL REFERENCES PjTipoExoBot (PjIdTipoExoBot),
+        PjEntrenamiento VARCHAR(1) NOT NULL,
+        PjNAccion INTEGER,
+        Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
+        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaModifica DATETIME
+    );
+
+INSERT INTO
+    PjTipoMunicion (PjNombre)
+VALUES
+    ('Energía_BioSensor'),
+    ('Energía_BioEscaner');
+
+INSERT INTO
+    PjTipoArma (PjNombre)
+VALUES
+    ('PjBioSensor'),
+    ('PjBioEscaner');
+
+INSERT INTO
+    PjTipoExoBot (PjNombre)
+VALUES
+    ('ExoAsalto'),
+    ('ExoExplorador'),
+    ('ExoInfanteria'),
+    ('ExoMedico'),
+    ('ExoComando');
