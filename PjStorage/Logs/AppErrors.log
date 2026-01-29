@@ -1,0 +1,4 @@
+???? SHOW ?? Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
+????? LOG  ?? 2026-01-28 23:44:36 | PjIExoBotDAO.DataHelperSQLiteDAO | No suitable driver found for jdbc:sqlite:PjStorage/PjDataBase/PjDataBaseEXO.sqlite
+???? SHOW ?? Ups! Error inesperado. Por favor, contacte al administrador del sistema. 
+????? LOG  ?? 2026-01-28 23:45:32 | PjIExoBotDAO.DataHelperSQLiteDAO | No suitable driver found for jdbc:sqlite:PjStoragePjDataBasePjDataBaseEXO.sqlite

@@ -17,7 +17,7 @@ CREATE TABLE
         PjIdTipoMunicion INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
         PjNombre VARCHAR(10) NOT NULL,
         Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
-        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaCreacion DATETIME DEFAULT (datetime('now', 'localtime')),
         FechaModifica DATETIME
     );
 
@@ -27,7 +27,7 @@ CREATE TABLE
         PjIdTipoMunicion INTEGER NOT NULL REFERENCES PjTipoMunicion (PjIdTipoMunicion),
         PjNombre VARCHAR(10) NOT NULL,
         Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
-        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaCreacion DATETIME DEFAULT (datetime('now', 'localtime')),
         FechaModifica DATETIME
     );
 
@@ -36,7 +36,7 @@ CREATE TABLE
         PjIdTipoArma INTEGER PRIMARY KEY AUTOINCREMENT,
         PjNombre TEXT NOT NULL UNIQUE,
         Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
-        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaCreacion DATETIME DEFAULT (datetime('now', 'localtime')),
         FechaModifica DATETIME
     );
 
@@ -46,7 +46,7 @@ CREATE TABLE
         PjIdTipoArma INTEGER NOT NULL REFERENCES PjTipoArma (PjIdTipoArma),
         PjNombre TEXT NOT NULL,
         Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
-        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaCreacion DATETIME DEFAULT (datetime('now', 'localtime')),
         FechaModifica DATETIME
     );
 
@@ -55,7 +55,7 @@ CREATE TABLE
         PjIdTipoExoBot INTEGER PRIMARY KEY AUTOINCREMENT,
         PjNombre VARCHAR(50) NOT NULL,
         Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
-        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaCreacion DATETIME DEFAULT (datetime('now', 'localtime')),
         FechaModifica DATETIME
     );
 
@@ -66,7 +66,7 @@ CREATE TABLE
         PjEntrenamiento VARCHAR(1) NOT NULL,
         PjNAccion INTEGER,
         Estado VARCHAR(1) NOT NULL DEFAULT ('A'),
-        FechaCreacion DATETIME DEFAULT (datetime ('now', 'localtime')),
+        FechaCreacion DATETIME DEFAULT (datetime('now', 'localtime')),
         FechaModifica DATETIME
     );
 
@@ -90,3 +90,8 @@ VALUES
     ('ExoInfanteria'),
     ('ExoMedico'),
     ('ExoComando');
+
+INSERT INTO
+    PjIExoBot (PjIdTipoExoBot, PjEntrenamiento, PjNAccion)
+VALUES
+    (4, 'N', 0);

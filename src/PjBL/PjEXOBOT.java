@@ -2,44 +2,54 @@ package PjBL;
 
 public abstract class PjEXOBOT extends PjIAEXO {
 
-    // Atributos definidos en tu diagrama (Imagen 1)
-    private Integer PjIdExobot;
-    private Integer PjIdTipoExobot;
-    private Boolean PjEntrenamiento; // En diagrama dice Boolean
-    private Integer PjNAccion;
+    // Estos atributos recibirán los valores del DTO
+    protected Integer pjIdExoBot;
+    protected Integer pjIdTipoExoBot; // <-- Este se llena con el DTO
+    protected String pjEntrenamiento;
+    protected Integer pjNAccion;
 
-    // COMPOSICIÓN (Los rombos negros de tu diagrama)
-    // Se declaran como 'protected' o tienen getters para que los hijos (ExoMedico)
-    // los usen.
     protected PjBrazoDerecho brazoDerecho;
     protected PjBrazoIzquierdo brazoIzquierdo;
     protected PjPierna pierna;
 
     public PjEXOBOT() {
-        // En la composición, el ciclo de vida de las partes depende del todo.
-        // Las instanciamos aquí mismo.
         this.brazoDerecho = new PjBrazoDerecho();
         this.brazoIzquierdo = new PjBrazoIzquierdo();
         this.pierna = new PjPierna();
-
-        // Inicialización por defecto
-        this.PjNAccion = 0;
-        this.PjEntrenamiento = false;
+        this.pjNAccion = 0;
+        this.pjEntrenamiento = "NO";
     }
 
-    // Métodos abstractos para obligar a definir comportamiento
-    public abstract boolean entrenar();
+    // Getters y Setters obligatorios para que funcione el código de arriba
+    public void setPjIdExoBot(Integer id) {
+        this.pjIdExoBot = id;
+    }
 
-    public abstract String realizarAccion();
+    public Integer getPjIdExoBot() {
+        return pjIdExoBot;
+    }
 
-    // Getters y Setters según tu diagrama
+    public void setPjIdTipoExoBot(Integer idTipo) {
+        this.pjIdTipoExoBot = idTipo;
+    }
+
+    public Integer getPjIdTipoExoBot() {
+        return pjIdTipoExoBot;
+    }
+
+    public String getPjEntrenamiento() {
+        return pjEntrenamiento;
+    }
+
+    public void setPjEntrenamiento(String e) {
+        this.pjEntrenamiento = e;
+    }
+
     public Integer getPjNAccion() {
-        return PjNAccion;
+        return pjNAccion;
     }
 
-    public void setPjNAccion(Integer pjNAccion) {
-        PjNAccion = pjNAccion;
+    public void setPjNAccion(Integer n) {
+        this.pjNAccion = n;
     }
-
-    // ... resto de getters y setters ...
 }

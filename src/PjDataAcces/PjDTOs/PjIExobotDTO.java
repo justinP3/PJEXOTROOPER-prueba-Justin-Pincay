@@ -40,8 +40,28 @@ public class PjIExobotDTO {
         PjIdIExoBot = pjIdIExoBot;
     }
 
-    public Integer getPjIdTipoExoBot() {
+    public Integer getPjIdTipoExoBotID() {
         return PjIdTipoExoBot;
+    }
+
+    public String getPjIdTipoExoBot() {
+        if (PjIdTipoExoBot == null)
+            return "Desconocido";
+
+        switch (PjIdTipoExoBot) {
+            case 1:
+                return "ExoAsalto";
+            case 2:
+                return "ExoExplorador";
+            case 3:
+                return "ExoInfanteria";
+            case 4:
+                return "ExoMedico";
+            case 5:
+                return "ExoComando";
+            default:
+                return "Tipo #" + PjIdTipoExoBot;
+        }
     }
 
     public void setPjIdTipoExoBot(Integer pjIdTipoExoBot) {

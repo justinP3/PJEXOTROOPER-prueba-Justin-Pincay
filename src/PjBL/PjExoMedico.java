@@ -1,30 +1,33 @@
 package PjBL;
 
-public class PjExoMedico extends PjEXOBOT {
+public class PjExoMedico extends PjEXOBOT implements PjIEntrenoSensor, PjIEntrenoScanner {
 
     public PjExoMedico() {
-        super(); // Importante: Esto crea los brazos y las piernas definidos en el padre
-    }
-
-    @Override
-    public boolean entrenar() {
-        // Lógica de entrenamiento
-        return true;
-    }
-
-    @Override
-    public String realizarAccion() {
-
-        this.setPjNAccion(this.getPjNAccion() + 1);
-
-        PjArma herramienta = new PjBioSensor();
-        PjMunicion energia = new PjEnergiaBioSensor();
-
-        return this.brazoDerecho.pjUsarArma(energia, herramienta);
+        super();
     }
 
     @Override
     public boolean Asistir() {
+        this.pjNAccion++;
+
+        PjArma herramienta = new PjBioEscanner();
+        PjMunicion energia = new PjEnergiaBioEscanner();
+
+        String resultado = this.brazoDerecho.PjUsarArma(energia, herramienta);
+
+        System.out.println("ACCION: " + resultado);
         return true;
+    }
+
+    @Override
+    public void PjUsarSensor() {
+        System.out.println("ExoMedico: Entrenando con SENSOR...");
+        this.setPjEntrenamiento("SI");
+    }
+
+    @Override
+    public void PjUsarScanner() {
+        System.out.println("ExoMedico: Entrenando con SCANNER...");
+        this.setPjEntrenamiento("SI");
     }
 }
